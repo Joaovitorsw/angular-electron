@@ -7,10 +7,10 @@ import * as fs from 'fs';
   providedIn: 'root',
 })
 export class ElectronService {
-  ipcRenderer: typeof ipcRenderer | undefined;
-  webFrame: typeof webFrame | undefined;
-  childProcess: typeof childProcess | undefined;
-  fs: typeof fs | undefined;
+  readonly ipcRenderer: typeof ipcRenderer | undefined;
+  readonly webFrame: typeof webFrame | undefined;
+  readonly childProcess: typeof childProcess | undefined;
+  readonly fs: typeof fs | undefined;
 
   constructor() {
     if (this.isElectron()) {
@@ -19,7 +19,6 @@ export class ElectronService {
       this.webFrame = electron.webFrame;
       this.fs = window.require('fs');
       this.childProcess = window.require('child_process');
-
       this.childProcess?.exec(
         'node -v',
         (error: Error | null, stdout: string, stderr: string) => {

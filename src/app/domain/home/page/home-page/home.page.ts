@@ -8,8 +8,8 @@ import { SharedModule } from '../../../../shared/shared.module';
   standalone: true,
   imports: [CommonModule, SharedModule],
 })
-export class HomeComponent implements OnInit {
+export class HomePage implements OnInit {
   ngOnInit(): void {
-    console.log('HomeComponent INIT');
+    console.log('HomePage INIT');
   }
 }
