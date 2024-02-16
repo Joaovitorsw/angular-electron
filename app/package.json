@@ -1,0 +1,12 @@
+{
+  "name": "angular-electron",
+  "description": "Angular Electron sample",
+  "author": {
+    "name": "João Vitor Pereira dos Santos",
+    "email": "joaovitorswbr@gmail.com"
+  },
+  "version": "14.0.0",
+  "main": "main.js",
+  "private": true,
+  "dependencies": {}
+}
