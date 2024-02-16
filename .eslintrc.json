@@ -1,5 +1,6 @@
 {
   "root": true,
+  "parser": "babel-eslint",
   "ignorePatterns": [
     "app/**/*", // ignore nodeJs files
     "dist/**/*",
