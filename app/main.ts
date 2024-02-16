@@ -1,6 +1,6 @@
 import { app, BrowserWindow, screen } from 'electron';
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 
 let win: BrowserWindow | null = null;
 const args = process.argv.slice(1),
@@ -28,10 +28,8 @@ function createWindow(): BrowserWindow {
     require('electron-reloader')(module);
     win.loadURL('http://localhost:4200');
   } else {
-    // Path when running electron executable
     let pathIndex = './index.html';
     if (fs.existsSync(path.join(__dirname, '../dist/index.html'))) {
-      // Path when running electron in local folder
       pathIndex = '../dist/index.html';
     }
     const url = new URL(path.join('file:', __dirname, pathIndex));
