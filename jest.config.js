@@ -1,5 +1,3 @@
-const esModules = ["@angular", "@ngrx"];
-
 module.exports = {
   preset: "jest-preset-angular",
   testEnvironment: "jsdom",
@@ -16,6 +14,6 @@ module.exports = {
     ],
   },
   transformIgnorePatterns: [
-    `<rootDir>/node_modules/(?!.*\\.mjs$|${esModules.join("|")})`,
+    "<rootDir>/node_modules/(?!.*\\.mjs$|@angular|@ngrx)",
   ],
 };
